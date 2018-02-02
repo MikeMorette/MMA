@@ -1,19 +1,27 @@
-<ion-menu [content]="content">
+<style type="text/css">
+.header-global::after {
+    left: 0;
+    bottom: -5px;
+    background-image: none !important;
+    background-position: left 0 top -2px;
+    position: absolute;
+    z-index: 9999999;
+    width: 100%;
+    height: 5px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMV…h/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    content: "";
+}
+</style>
 
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+<ion-header class="header-global" style="margin-top:22px;">
+  <ion-navbar style="">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
       </button>
-    </ion-list>
-  </ion-content>
-
-</ion-menu>
-
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

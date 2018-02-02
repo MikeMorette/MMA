@@ -1,0 +1,77 @@
+<ion-header style="height: 18%;margin-top:61px;">
+  <ion-navbar style="height: 100%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="http://n22.mikex.ru/uploads/images/{{user.avatar}}" class="avatar" (click)="openAvatarMenu()"/>
+        </ion-col>
+        <ion-col col-9 style="padding-left:10px;">
+          <h3 style="text-align:left;font-weight:600;margin-top: 36px;font-size: 24px;color:#fff;margin-bottom:0;">{{user.name}} {{user.surname}}</h3>
+          <h4 style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Спортсмен</h4>
+          <h4 style="text-align:left;text-transform:uppercase;color:rgb(255, 255, 255);font-size: 16px;margin-top: 0;">Рейтинг: {{ user.rating }}</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card style="margin-top:70px;">
+    <ion-card-header style="background: #F4F4F4;">
+      Уведомление
+    </ion-card-header>
+    <ion-card-content style="padding-top:12px;">
+      Вас приглашают в бой...
+    </ion-card-content>
+    <div style="padding-bottom:12px;">
+          <button ion-button clear small color="primary" icon-start style="float:right;">
+            Принять
+          </button>
+          <button ion-button clear small color="danger" icon-start style="float:right;">
+            Отклонить
+          </button>
+        </div>
+  </ion-card>
+  <ion-card style="margin-top:20px;">
+
+    <!--<ion-card-header style="background: #F4F4F4;">
+      <div style="float:right;color: #575757;">
+        <ion-select interface="popover">
+          <ion-option (select)="stpSelect(1)">БОИ ({{fights.all}})</ion-option>
+          <ion-option (select)="stpSelect(2)">Победа ({{fights.win}})</ion-option>
+          <ion-option (select)="stpSelect(3)">Поражение ({{fights.won}})</ion-option>
+        </ion-select>
+      </div>
+    </ion-card-header>-->
+    <ion-card-header style="background: #F4F4F4;padding:0;">
+      <div style="color: #575757;">
+
+        <ion-list style="width: 100%;border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;">
+          <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+            <ion-label>Бои</ion-label>
+            <ion-select [(ngModel)]="fightsType" interface="popover" (ngModelChange)="onChange($event)">
+              <ion-option value="1" (select)="stpSelect('1')">Все ({{ all }})</ion-option>
+              <ion-option value="2" (select)="stpSelect('2')">Победа ({{ win }})</ion-option>
+              <ion-option value="3" (select)="stpSelect('3')">Поражение ({{ won }})</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-card-header>
+  
+    <ion-card-content style="padding-top:12px;">
+      <p *ngIf="fightsNulled" style="text-align:center;padding:16px;color: #797979;">Список пуст</p>
+      <div *ngFor="let item of fightsFor" style="text-align: -webkit-center;color:#343434;font-weight: 500;margin-top: 6px;">
+        <ion-icon ios="ios-person" md="md-person" style="margin-right: 7px;color: #04a904;" [ngStyle]="{'color': item.win == user.id ? 'green' : 'red' }"></ion-icon>{{ item.user1.surname}} {{ item.user1.name}}
+        <span style="margin: 0 30px;">VS</span>
+        <ion-icon ios="ios-person" md="md-person" style="margin-right: 7px;color: #04a904;" [ngStyle]="{'color': item.win == user.id ? 'green' : 'red' }"></ion-icon>{{ item.user2.surname}} {{ item.user2.name}}
+      </div>
+    </ion-card-content>
+  
+  </ion-card>
+
+  <!--<button ion-button color="danger" style="width: 40%;margin: 20px 30%;" (click)="goJudge()">Начать судить</button>-->
+
+</ion-content>

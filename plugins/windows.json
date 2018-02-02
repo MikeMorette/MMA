@@ -1,0 +1,49 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-secure-storage": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "MMA"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "MMA"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "MMA"
+    }
+  }
+}

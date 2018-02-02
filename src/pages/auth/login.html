@@ -1,0 +1,30 @@
+<ion-content style="height:100%; width:100%; background:#171A1C;">
+  <ion-grid>
+    <ion-row align-items-center justify-content-center style="margin:67px;">
+      <h2 style="color: #fff;font-weight: 700;font-size: 34px;">Авторизация<br>{{ my }}</h2>
+    </ion-row>
+
+    <ion-row align-items-center justify-content-center>
+      <ion-list style="margin-bottom: 0;width: 95%;background: #fff;border-top-left-radius: 2px; border-top-right-radius: 2px;padding-top: 20px;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+          <ion-input type="text" placeholder="Логин" [(ngModel)]="mUser.login"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row align-items-center justify-content-center style="margin-bottom: 40px;">
+      <ion-list style="width: 95%;background: #fff;border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;padding-bottom: 20px;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;margin-top: 21px;">
+          <ion-input type="password" placeholder="Пароль" [(ngModel)]="mUser.password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    
+    <ion-row align-items-center justify-content-center>
+        <button ion-button color="light" (click)="login($event)">Войти</button>
+    </ion-row>
+    <ion-row align-items-center justify-content-center>
+        <button ion-button color="light" clear (click)="openRegister($event)">Регистрация</button>
+    </ion-row>
+  </ion-grid>
+  <p style="color:rgb(150, 150, 150);">{{ error }}</p>
+</ion-content>

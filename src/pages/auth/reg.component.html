@@ -1,0 +1,38 @@
+<ion-content style="height:100%; width:100%; background:#171A1C;">
+  <ion-grid>
+    <ion-row align-items-center justify-content-center style="margin-top:12px;margin-bottom:18px;">
+      <h2 style="color: #fff;font-weight: 700;font-size: 34px;">Регистрация</h2>
+    </ion-row>
+    <form [formGroup]="typeForm" style="margin-top:100px;">
+    <ion-row align-items-center justify-content-center >
+      <ion-list radio-group formControlName="types">
+        <ion-item>
+          <ion-label>Спортсмен</ion-label>
+          <ion-radio checked="true" value="3"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Тренер</ion-label>
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Судья</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Болельщик</ion-label>
+          <ion-radio value="4"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </form>
+    <ion-row align-items-center justify-content-center>
+      <button ion-button color="light" (click)="register($event)">Зарегистрироваться</button>
+    </ion-row>
+    <ion-row align-items-center justify-content-center>
+      <button ion-button color="light" clear (click)="openLogin($event)" style="margin-bottom: 40px;">Авторизация</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

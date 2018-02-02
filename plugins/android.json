@@ -1,0 +1,64 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-secure-storage": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "ru.mikex.mmasports"
+    }
+  }
+}

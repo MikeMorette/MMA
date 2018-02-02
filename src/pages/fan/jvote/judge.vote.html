@@ -1,0 +1,49 @@
+<ion-header style="height: 18%;margin-top:61px;">
+    <ion-navbar style="height: 100%;">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="http://n22.mikex.ru/uploads/images/{{user.avatar}}" class="avatar" style="height:75px;" />
+          </ion-col>
+          <ion-col col-9 style="padding-left:10px;">
+            <h3 style="text-align:left;font-weight:600;margin-top: 46px;font-size: 24px;color:#fff;margin-bottom:0;">{{user.name}} {{user.surname}}</h3>
+            <h4 style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Болельщик</h4>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+    </ion-navbar>
+</ion-header>
+  
+<ion-content padding style="margin-top:70px;">
+    <h6 style="text-align:center;">"{{ tType }}" <ion-icon name="arrow-dropright"></ion-icon> {{ weight }} КГ</h6>
+    <div style="border: 4px solid rgb(190, 190, 190);padding: 6px;text-align:center;margin: 8px 16px;color:rgb(138, 138, 138);text-transform:uppercase;font-size:24px;"><b>{{ stage.user1.surname }} VS {{ stage.user2.surname }}</b></div>
+    <div style="border: 4px solid rgb(190, 190, 190);padding: 6px;text-align:center;margin: 8px 16px;color:rgb(138, 138, 138);text-transform:uppercase;font-size:24px;" *ngIf="fightEnded"><b>СУДЬЯ: {{ judge.surname }} {{ judge.name }}</b></div>
+    <h6 style="margin-top:45%;color:rgb(138, 138, 138);text-align:center;text-transform:uppercase;font-size:24px;" *ngIf="!fightEnded">Бой не завершен</h6>
+    <div *ngIf="fightEnded">
+      <ion-list *ngIf="!alreadyGraded">
+        <ion-list-header>
+          Выберите рациональную оценку судейства
+        </ion-list-header>
+        
+        <ion-item>
+          <p style="text-align:center;">{{ gradeValue }}</p>
+        </ion-item>
+        <ion-item>
+          <ion-range min="1" max="10" step="1" snaps="true" [(ngModel)]="gradeValue" color="danger">
+            <ion-icon range-left small color="danger" name="star-outline"></ion-icon>
+            <ion-icon range-right color="danger" name="star"></ion-icon>
+          </ion-range>
+        </ion-item>
+        <!--<button ion-item (click)="setGrade(5)" style="color:rgb(19, 82, 6);text-transform:uppercase;">Отлично +5</button>
+        <button ion-item (click)="setGrade(3)" style="color:rgb(30, 58, 25);text-transform:uppercase;">Нормально +3</button>
+        <button ion-item (click)="setGrade(1)" style="color:rgb(32, 39, 31);text-transform:uppercase;">Ошибался +1</button>
+        <button ion-item (click)="setDownsGrade(1)" style="color:rgb(39, 31, 31);text-transform:uppercase;">Плохо -1</button>
+        <button ion-item (click)="setDownsGrade(5)" style="color:rgb(58, 25, 25);text-transform:uppercase;">Засуживал -5</button>
+        <button ion-item (click)="setDownsGrade(10)" style="color:rgb(82, 6, 6);text-transform:uppercase;">Явно засуживал -10</button>-->
+      </ion-list>
+      <button ion-button clear style="width:90%;margin-top:12px;" (click)="setGrade()" *ngIf="!alreadyGraded">Оценить</button>
+      <h6 style="margin-top:45%;color:rgb(138, 138, 138);text-align:center;text-transform:uppercase;font-size:24px;" *ngIf="alreadyGraded">Ваша оценка: {{ judgeGrade }}</h6>
+    </div>
+</ion-content>
+  

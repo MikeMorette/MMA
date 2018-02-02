@@ -1,0 +1,35 @@
+<ion-header style="height: 18%;margin-top:61px;">
+  <ion-navbar style="height: 100%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="http://n22.mikex.ru/uploads/images/{{user.avatar}}" class="avatar" style="height:75px;" />
+        </ion-col>
+        <ion-col col-9 style="padding-left:10px;">
+          <h3 style="text-align:left;font-weight:600;margin-top: 36px;font-size: 24px;color:#fff;margin-bottom:0;">{{user.name}} {{user.surname}}</h3>
+          <h4 *ngIf="!isFan" style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Судья</h4>
+          <h4 *ngIf="isFan" style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Болельщик</h4>
+          <h4 *ngIf="!isFan" style="text-align:left;text-transform:uppercase;color:rgb(255, 255, 255);font-size: 16px;margin-top: 0;">Рейтинг: 100</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="margin-top:70px;">
+  <form [formGroup]="weightForm">
+    <ion-list radio-group no-lines formControlName="weights">
+      <ion-list-header>
+        Выберите весовую категорию
+      </ion-list-header>
+    
+      <ion-item *ngFor="let item of weightsList">
+        <ion-label>{{ item.weight }} КГ</ion-label>
+        <ion-radio value="{{ item.id }}"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </form>
+  <button ion-button color="danger" style="width: 40%;margin: 20px 30%;" (click)="next()">Далее</button>
+
+</ion-content>

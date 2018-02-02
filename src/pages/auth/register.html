@@ -1,0 +1,50 @@
+<ion-content style="height:100%; width:100%; background:#171A1C;">
+  <ion-grid>
+    <ion-row align-items-center justify-content-center style="margin-top:12px;margin-bottom:18px;">
+      <h2 style="color: #fff;font-weight: 700;font-size: 34px;">Регистрация</h2>
+    </ion-row>
+  
+    <ion-row align-items-center justify-content-center>
+      <ion-list style="margin-bottom: 0;width: 95%;background: #fff;border-top-left-radius: 2px; border-top-right-radius: 2px;padding-top: 20px;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+          <ion-input type="text" placeholder="Имя" [(ngModel)]="mUser.name"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row align-items-center justify-content-center style="">
+      <ion-list style="width: 95%;background: #fff;padding-bottom: 20px;margin-bottom: 0;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;margin-top: 21px;">
+          <ion-input type="text" placeholder="Фамилия" [(ngModel)]="mUser.surname"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row align-items-center justify-content-center style="">
+      <ion-list style="width: 95%;background: #fff;padding-bottom: 20px;margin-bottom: 0;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+          <ion-input type="text" placeholder="Email" [(ngModel)]="mUser.email"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row align-items-center justify-content-center style="">
+      <ion-list style="width: 95%;background: #fff;padding-bottom: 20px;margin-bottom: 0;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+          <ion-input type="password" placeholder="Пароль" [(ngModel)]="mUser.password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    <ion-row align-items-center justify-content-center style="">
+      <ion-list style="width: 95%;background: #fff;padding-bottom: 20px;margin-bottom: 0;">
+        <ion-item style="background: rgba(0,0,0,0);margin: 0 20px;width: auto;">
+          <ion-input type="password" placeholder="Повторите пароль" [(ngModel)]="mUser.rpassword"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+      
+    <ion-row align-items-center justify-content-center>
+      <button ion-button color="light" (click)="register($event)">Далее</button>
+    </ion-row>
+    <ion-row align-items-center justify-content-center>
+      <button ion-button color="light" clear (click)="openLogin($event)" style="margin-bottom: 40px;">Авторизация</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

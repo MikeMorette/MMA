@@ -1,0 +1,40 @@
+<ion-header style="height: 18%;margin-top:61px;">
+  <ion-navbar style="height: 100%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="http://n22.mikex.ru/uploads/images/{{user.avatar}}" class="avatar" (click)="openAvatarMenu()"/>
+        </ion-col>
+        <ion-col col-9 style="padding-left:10px;">
+          <h3 style="text-align:left;font-weight:600;margin-top: 36px;font-size: 24px;color:#fff;margin-bottom:0;">{{user.name}} {{user.surname}}</h3>
+          <h4 style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Судья</h4>
+          <h4 style="text-align:left;text-transform:uppercase;color:rgb(255, 255, 255);font-size: 16px;margin-top: 0;">Рейтинг: {{ user.rating }}</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card style="margin-top:70px;">
+
+    <ion-card-header style="background: #F4F4F4;">
+      <div style="float:left;color: #575757;">ОТСУДИЛ 10 СХВАТОК</div>
+    </ion-card-header>
+  
+    <ion-card-content style="padding-top:12px;">
+      <p *ngIf="fightsNulled" style="text-align:center;padding:16px;color: #797979;">Список пуст</p>
+      <div *ngFor="let item of fights" style="text-align: -webkit-center;color:#343434;font-weight: 500;margin-top: 6px;">
+        <ion-icon ios="ios-person" md="md-person" style="margin-right: 7px;color: #04a904;"></ion-icon>{{ item.user1.surname}} {{ item.user1.name}}
+        <span style="margin: 0 30px;">VS</span>
+        <ion-icon ios="ios-person" md="md-person" style="margin-right: 7px;color: #04a904;"></ion-icon>{{ item.user2.surname}} {{ item.user2.name}}
+      </div>
+    </ion-card-content>
+  
+  </ion-card>
+
+  <button ion-button color="danger" style="width: 40%;margin: 20px 30%;" (click)="goJudge()">Начать судить</button>
+
+</ion-content>

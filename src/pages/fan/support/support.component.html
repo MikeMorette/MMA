@@ -1,0 +1,49 @@
+<ion-content style="">
+    <div style="height: 15%;width:100%;margin-top:40px;background: #171a1c;position:fixed;z-index:9999;">
+        <div style="height: 100%;background:#171a1c;">
+          <ion-grid style="background:#171a1c;padding:16px;">
+            <ion-row style="background:#171a1c;margin-top:30px;">
+              <h4 style="position:relative;left:2px;color:#fff;">ПОИСК СПОРТСМЕНА</h4>
+            </ion-row>
+            <ion-row style="background:#171a1c;">
+                <ion-col col-10>
+                    <ion-list style="width: 100%;background: #fff;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
+                        <ion-item style="background: rgba(0,0,0,0);margin: 0 0px;width: auto;margin-top: 0px;">
+                          <ion-input type="text" placeholder="Поиск..." [(ngModel)]="search"></ion-input>
+                        </ion-item>
+                      </ion-list>
+                </ion-col>
+                <ion-col>
+                    <button ion-button icon-only (click)="searchAction()">
+                        <ion-icon name="search"></ion-icon>
+                      </button>
+                </ion-col>
+                
+            </ion-row>
+          </ion-grid>
+      
+        </div>
+      </div>
+
+      <ion-list style="width: 100%;z-index:9998;margin-top: 54%;" no-lines>
+          <button ion-item *ngFor="let item of users" (click)="selectUser(item)" style="">
+            <!--<ion-item *ngFor="let item of users" (click)="selectUser(item.id)">-->
+              <ion-grid style="">
+                <ion-row>
+                  <ion-col><img src="http://n22.mikex.ru/uploads/images/{{item.avatar}}" style="width:60px;height:60px;border-radius:80px;" /></ion-col>
+                  <ion-col style="height:60px;line-height:60px;text-align: left;">
+                    <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+                      <b>{{item.surname}} {{item.name}}</b><br><b style="color:rgb(187, 187, 187);">СПОРТСМЕН</b>
+                    </span>
+                  </ion-col>
+                  <ion-col style="height:60px;line-height:60px;text-align: right;">
+                    <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+                      <ion-icon name="star" style="color:rgb(255, 174, 0);"></ion-icon> <b>{{ item.rating }}</b>
+                    </span>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+          </button>
+        </ion-list>
+
+</ion-content>

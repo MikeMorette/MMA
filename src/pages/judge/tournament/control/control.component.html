@@ -1,0 +1,55 @@
+<ion-header style="height: 18%;margin-top:61px;">
+  <ion-navbar style="height: 100%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="http://n22.mikex.ru/uploads/images/{{user.avatar}}" class="avatar" style="width:80px;height:80px;" />
+        </ion-col>
+        <ion-col col-9 style="padding-left:10px;">
+          <h3 style="text-align:left;font-weight:600;margin-top: 36px;font-size: 24px;color:#fff;margin-bottom:0;">{{user.name}} {{user.surname}}</h3>
+          <h4 style="text-align:left;text-transform:uppercase;color:#DCDCDC;font-size: 14px;margin-top: 0;">Судья</h4>
+          <h4 style="text-align:left;text-transform:uppercase;color:rgb(255, 255, 255);font-size: 16px;margin-top: 0;">Рейтинг: 100</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="margin-top:70px;">
+  
+  <ion-grid>
+    <ion-row *ngIf="isFightClosed" style="text-align:center;width:100%;margin-bottom:40px;"><h4 style="color:#171a1c;text-align:center;width:100%;margin-bottom:16px;margin-top:16px;">БОЙ ЗАВЕРШЕН</h4></ion-row>
+    <ion-row style="padding: 6px 12px;z-index:11;box-shadow:0 3px 4px rgba(0,0,0,0.3);border-radius:4px;" [ngStyle]="{'border': winnerId == selectedFight.user1.id ? '4px solid #18A335' : 'none' }">
+      <ion-col col-3><img src="http://n22.mikex.ru/uploads/images/{{selectedFight.user1.avatar}}" style="width:60px;height:60px;border-radius:80px;" /></ion-col>
+      <ion-col style="height:60px;line-height:60px;text-align: left;">
+        <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+          <b>{{ selectedFight.user1.surname }} {{ selectedFight.user1.name }}</b><br><b style="color:rgb(187, 187, 187);">СПОРТСМЕН</b>
+        </span>
+      </ion-col>
+      <ion-col style="height:60px;line-height:60px;text-align: right;">
+        <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+          <ion-icon name="star" style="color:rgb(255, 174, 0);"></ion-icon> <b>{{ selectedFight.user1.rating }}</b>
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row style="text-align:center;width:100%;"><h4 style="color:#171a1c;text-align:center;font-size:16px;width:100%;margin-bottom:16px;margin-top:16px;">VERSUS</h4></ion-row>
+    <ion-row style="padding: 6px 12px;z-index:11;box-shadow:0 3px 4px rgba(0,0,0,0.3);border-radius:4px;margin-bottom:16px;" [ngStyle]="{'border': winnerId == selectedFight.user2.id ? '4px solid #18A335' : 'none' }">
+      <ion-col col-3><img src="http://n22.mikex.ru/uploads/images/{{selectedFight.user2.avatar}}" style="width:60px;height:60px;border-radius:80px;" /></ion-col>
+      <ion-col style="height:60px;line-height:60px;text-align: left;">
+        <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+          <b>{{ selectedFight.user2.surname }} {{ selectedFight.user2.name }}</b><br><b style="color:rgb(187, 187, 187);">СПОРТСМЕН</b>
+        </span>
+      </ion-col>
+      <ion-col style="height:60px;line-height:60px;text-align: right;">
+        <span style="display: inline-block;vertical-align: middle;line-height: normal;">
+          <ion-icon name="star" style="color:rgb(255, 174, 0);"></ion-icon> <b>{{ selectedFight.user2.rating }}</b>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div *ngIf="!isFightClosed">
+    <button *ngIf="!isActive" ion-button color="danger" style="width: 60%;margin: 40px 20%;" (click)="startFight()">Начать поединок</button>
+    <button *ngIf="isActive" ion-button color="danger" style="width: 60%;margin: 40px 20%;" (click)="finishFight()">Завершить поединок</button>
+  </div>
+</ion-content>

@@ -1,0 +1,148 @@
+{
+  "project_info": {
+    "project_number": "69246742299",
+    "firebase_url": "https://api-project-69246742299.firebaseio.com",
+    "project_id": "api-project-69246742299",
+    "storage_bucket": "api-project-69246742299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69246742299:android:a241f130ba3ccabc",
+        "android_client_info": {
+          "package_name": "ru.ex.mike.okvann"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69246742299-rdakqs4ojk0g645vkqqr3fuvraabgt9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQNkViZNa7Zs7M2xSUG6Ydeb7jFPA3Hqo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69246742299:android:34e9f2a51f85e941",
+        "android_client_info": {
+          "package_name": "ru.ex.mike.clickauto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69246742299-rdakqs4ojk0g645vkqqr3fuvraabgt9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQNkViZNa7Zs7M2xSUG6Ydeb7jFPA3Hqo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69246742299:android:f242598f463597fb",
+        "android_client_info": {
+          "package_name": "ru.appril.nakhodu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69246742299-rdakqs4ojk0g645vkqqr3fuvraabgt9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQNkViZNa7Zs7M2xSUG6Ydeb7jFPA3Hqo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69246742299:android:01e0d9f6ad91a502",
+        "android_client_info": {
+          "package_name": "ru.mikex.mmasports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69246742299-5dp6rvkhr99oo810da1kquijaus3bdc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.mikex.mmasports",
+            "certificate_hash": "25e6e383646cc1771b2b665896f818bb68c6f73a"
+          }
+        },
+        {
+          "client_id": "69246742299-rdakqs4ojk0g645vkqqr3fuvraabgt9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQNkViZNa7Zs7M2xSUG6Ydeb7jFPA3Hqo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69246742299-rdakqs4ojk0g645vkqqr3fuvraabgt9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
